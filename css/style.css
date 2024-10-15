@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: Afacad Flux;
 }
 main {
   display: grid;
@@ -18,7 +19,12 @@ header {
   background-color: #1e1e1e;
   color: #fff;
 }
-
+header nav ul {
+  font-family: Afacad Flux;
+}
+footer ul {
+  font-family: Afacad Flux;
+}
 .logo {
   height: 60px;
   width: 90px;
@@ -265,7 +271,7 @@ footer {
 }
 .index-about h2 {
   display: flex;
-  font-size: x-large;
+  font-size: 2rem;
   font-weight: bold;
   padding-bottom: 2rem;
   flex-direction: column;
@@ -289,7 +295,6 @@ footer {
 .new-collection-title {
   display: flex;
   font-size: 3rem;
-  font-weight: bold;
   padding: 2rem 0 1rem 1.5rem;
   flex-direction: column;
   align-items: center;
