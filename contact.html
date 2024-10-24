@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/queries.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <title>Contact</title>
   </head>
   <body class="contact-page">
@@ -41,6 +46,8 @@
           ><textarea name="message" id=""></textarea>
         </form>
       </div>
+      <h3 class="map-title">Find us and our partners on the map!</h3>
+      <div id="map" class="leaflet"></div>
     </main>
     <footer>
       <ul class="footer-list">
@@ -50,4 +57,29 @@
       </ul>
     </footer>
   </body>
+  <script>
+    // Initialiseer de kaart en stel het startpunt en zoomniveau in
+    var map = L.map("map").setView([51.2165, 4.5032], 13);
+
+    // Voeg een OpenStreetMap-tegellaag toe aan de kaart
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // Voeg een marker toe aan de kaart
+    L.marker([51.2165, 4.5032])
+      .addTo(map)
+      .bindPopup("PORSCHE -Uilenbaan 200B, Wommelgem")
+      .openPopup();
+
+    L.marker([51.2047, 4.5033])
+      .addTo(map)
+      .bindPopup("LAMBORGHINI - Autolei 330, Wommelgem")
+      .openPopup();
+    L.marker([51.2045, 4.5031])
+      .addTo(map)
+      .bindPopup("Aston Martin - Autolei 322, Wommelgem")
+      .openPopup();
+  </script>
 </html>
